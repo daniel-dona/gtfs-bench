@@ -1,0 +1,9 @@
+script: 
+- cd docker/
+- docker build --tag oegdataintegration/gtfs-bench:travis-latest .
+before_deploy:
+- docker login -u $DH_USER -p $DH_PASS
+deploy:
+  provider: script
+  script:
+  - docker push oegdataintegration/gtfs-bench:latest

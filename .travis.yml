@@ -6,4 +6,4 @@ before_deploy:
 deploy:
   provider: script
   script:
-  - docker push oegdataintegration/gtfs-bench:latest
+  - docker push oegdataintegration/gtfs-bench:travis-latest
